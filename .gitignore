@@ -1,0 +1,4 @@
+config.py
+/__pycache__
+assistant.pyw
+vosk-model-small-ru-0.4

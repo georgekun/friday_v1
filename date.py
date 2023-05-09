@@ -1,0 +1,25 @@
+commands = {
+  "загружай моего бота" :"C:/telegram_bot/main.pyw",
+  "загружай браузер":"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
+  "редактор для джава":"C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.3.1/bin/idea64.exe",
+  "запусти вс код":"C:/Users/Jordan/AppData/Local/Programs/Microsoft VS Code/Code.exe",
+  "рабочий режим":"working_mode", 
+  "перезагрузка, система":"reboot",
+  "не можем ходить будем бегать":"smile",
+  "музыку":"music",
+  "сделай потише":"mute",
+  "сделай громче":"unmute",
+  "тупой":"stupid",
+  "вырубай":"stop",
+  "пятница ты здесь не спишь ту тут":"ok",
+  "пятница":"ok",
+  "загружай тексовый редактор ворд":"C:/ProgramData/Microsoft\Windows/Start Menu/Programs/Microsoft Office 2013/Word 2013.lnk",
+  "загружай ексель":"C:/ProgramData/Microsoft\Windows/Start Menu/Programs/Microsoft Office 2013/Excel 2013.lnk",
+  "пятница, ты молодец":"thanks",
+  "спасибо":"thanks",
+  "перемотай вперед на несколько секунд":"right",
+  "перемотай назад на несколько секунд":"left",
+  "останови видео, поставь на паузу":"space",
+  "закрой окно вкладку приложение":"close"
+}
+

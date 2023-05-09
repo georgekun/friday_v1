@@ -1,0 +1,154 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.13.0" title="Shotcut version 22.12.21" producer="main_bin">
+  <profile description="automatic" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="25" frame_rate_den="1" colorspace="709"/>
+  <chain id="chain0" out="00:03:42.880">
+    <property name="length">00:03:42.920</property>
+    <property name="eof">pause</property>
+    <property name="resource">c:/Users/Jordan/Documents/a_new_era_of_programming/all_stupid_projects/SUNDAY_PROJECT/Железный человек - Джарвис.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="creation_time">2023-02-19T21:43:08</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">fa3462be42c109dc19db3c4438bc7f17</property>
+  </chain>
+  <playlist id="main_bin" title="Shotcut version 22.12.21">
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="xml_retain">1</property>
+    <entry producer="chain0" in="00:00:00.000" out="00:03:42.880"/>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:03:42.880">
+    <property name="length">00:03:42.920</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:03:42.880"/>
+  </playlist>
+  <chain id="chain1" out="00:03:42.880">
+    <property name="length">00:03:42.920</property>
+    <property name="eof">pause</property>
+    <property name="resource">c:/Users/Jordan/Documents/a_new_era_of_programming/all_stupid_projects/SUNDAY_PROJECT/Железный человек - Джарвис.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="creation_time">2023-02-19T21:43:08</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">fa3462be42c109dc19db3c4438bc7f17</property>
+    <property name="shotcut:caption">Железный человек - Джарвис.mp4</property>
+  </chain>
+  <chain id="chain2" out="00:03:42.880">
+    <property name="length">00:03:42.920</property>
+    <property name="eof">pause</property>
+    <property name="resource">c:/Users/Jordan/Documents/a_new_era_of_programming/all_stupid_projects/SUNDAY_PROJECT/Железный человек - Джарвис.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="creation_time">2023-02-19T21:43:08</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">fa3462be42c109dc19db3c4438bc7f17</property>
+    <property name="shotcut:caption">Железный человек - Джарвис.mp4</property>
+  </chain>
+  <chain id="chain3" out="00:03:42.880">
+    <property name="length">00:03:42.920</property>
+    <property name="eof">pause</property>
+    <property name="resource">c:/Users/Jordan/Documents/a_new_era_of_programming/all_stupid_projects/SUNDAY_PROJECT/Железный человек - Джарвис.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="creation_time">2023-02-19T21:43:08</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">fa3462be42c109dc19db3c4438bc7f17</property>
+    <property name="shotcut:caption">Железный человек - Джарвис.mp4</property>
+  </chain>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <property name="shotcut:lock">0</property>
+    <entry producer="chain1" in="00:00:00.000" out="00:00:26.680"/>
+    <blank length="00:00:03.240"/>
+    <entry producer="chain2" in="00:00:29.960" out="00:01:02.080"/>
+    <blank length="00:00:03.320"/>
+    <entry producer="chain3" in="00:01:05.440" out="00:03:42.880"/>
+  </playlist>
+  <chain id="chain4" out="00:03:42.880">
+    <property name="length">00:03:42.920</property>
+    <property name="eof">pause</property>
+    <property name="resource">c:/Users/Jordan/Documents/a_new_era_of_programming/all_stupid_projects/SUNDAY_PROJECT/Железный человек - Джарвис.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="creation_time">2023-02-19T21:43:08</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">fa3462be42c109dc19db3c4438bc7f17</property>
+    <property name="shotcut:caption">Железный человек - Джарвис.mp4</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain5" out="00:03:42.880">
+    <property name="length">00:03:42.920</property>
+    <property name="eof">pause</property>
+    <property name="resource">c:/Users/Jordan/Documents/a_new_era_of_programming/all_stupid_projects/SUNDAY_PROJECT/Железный человек - Джарвис.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="creation_time">2023-02-19T21:43:08</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">fa3462be42c109dc19db3c4438bc7f17</property>
+    <property name="shotcut:caption">Железный человек - Джарвис.mp4</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <playlist id="playlist1">
+    <property name="shotcut:audio">1</property>
+    <property name="shotcut:name">A1</property>
+    <entry producer="chain4" in="00:00:26.720" out="00:00:29.920"/>
+    <blank length="00:00:00.160"/>
+    <entry producer="chain5" in="00:01:02.120" out="00:01:05.400"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 22.12.21" in="00:00:00.000" out="00:03:42.880">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <track producer="playlist1" hide="video"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.1</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">1</property>
+    </transition>
+    <transition id="transition2">
+      <property name="a_track">0</property>
+      <property name="b_track">2</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+  </tractor>
+</mlt>
