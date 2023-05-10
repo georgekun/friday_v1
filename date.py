@@ -1,25 +1,40 @@
+path = "C:/path_to_program/"
+
+
 commands = {
-  "загружай моего бота" :"C:/telegram_bot/main.pyw",
-  "загружай браузер":"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
-  "редактор для джава":"C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.3.1/bin/idea64.exe",
-  "запусти вс код":"C:/Users/Jordan/AppData/Local/Programs/Microsoft VS Code/Code.exe",
+  "блокнот":f"{path}notepad",
+  "бот" :f"{path}bot",
+  "браузер":f"{path}chrome",
+  "айдие":f"{path}intelej",
+  "вижуал студио код":f"{path}vsCode",
+  "командная строка":f"{path}cmd",
+  "фигма":f"{path}figma",
+  "ватсап вацап":f"{path}whatsup",
+  "телеграм":f"{path}telegram",
+  "дискорд":f"{path}discord",
+  
   "рабочий режим":"working_mode", 
   "перезагрузка, система":"reboot",
+  
   "не можем ходить будем бегать":"smile",
-  "музыку":"music",
-  "сделай потише":"mute",
-  "сделай громче":"unmute",
-  "тупой":"stupid",
-  "вырубай":"stop",
-  "пятница ты здесь не спишь ту тут":"ok",
-  "пятница":"ok",
-  "загружай тексовый редактор ворд":"C:/ProgramData/Microsoft\Windows/Start Menu/Programs/Microsoft Office 2013/Word 2013.lnk",
-  "загружай ексель":"C:/ProgramData/Microsoft\Windows/Start Menu/Programs/Microsoft Office 2013/Excel 2013.lnk",
-  "пятница, ты молодец":"thanks",
-  "спасибо":"thanks",
-  "перемотай вперед на несколько секунд":"right",
-  "перемотай назад на несколько секунд":"left",
-  "останови видео, поставь на паузу":"space",
-  "закрой окно вкладку приложение":"close"
+  
+  "музыка":"music",
+  "беззвука звук тихо потише":"mute",
+  "громко погромче добавь громкости":"unmute",
+  "останови видео, поставь на паузу стоп":"space",
+  "вперед":"right",
+  "назад":"left",
+  "закрой окно вкладку приложение":"close",
+   
+  "тупой дебил ишак":"stupid",
+  "вырубайся засыпай":"stop",
+  "пятница ты здесь не спишь ту тут спасибо красавчик ты молодец умничка ":"ok",
+  "не слушай хватит слушать":"thanks",
+
+
+  "ворд":f"{path}word",
+  "ексель таблицы":f"{path}excel",
+  "презентация поверпоинт":f"{path}powerpoint",
+  
 }
 

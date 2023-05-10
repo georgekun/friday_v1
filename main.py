@@ -37,7 +37,7 @@ porcupine = pvporcupine.create(
     access_key=config.porcupine_access,
     keyword_paths=["models/friday/friday.ppn"],
     model_path='models/friday/porcupine_params_ru.pv',
-    sensitivities=[0.8]
+    sensitivities=[0.6 ]
  )
 # работаем с VOSK
 model = vosk.Model("models/vosk-model-small-ru-0.4") # поменяе модель на более лучшую. Наверное будет сжираться много оперативки. Изначальная модель на 40мь
@@ -50,7 +50,7 @@ kaldi_rec = vosk.KaldiRecognizer(model, samplerate)
 
 
 loudness = True #глабально включен звук или нет, чтоб понять возвращать или нет
-mode_chatgpt = False # режим чата gpt
+
 record = pvrecorder.PvRecorder(device_index=-1,frame_length=porcupine.frame_length)
 volume.SetMute(0,None)
 playsound.playsound('sound/run.wav')
@@ -100,8 +100,6 @@ def cmd(command):
            os._exit(1)
         elif(command == "ok"):
            play("greating_1")
-        elif(command =="thanks"):
-           play("thanks")
            
         elif(command in ["right","left","space","close"]):
            if(command == 'space'):
@@ -113,9 +111,7 @@ def cmd(command):
                  pyautogui.press(f"{command}")
         elif(command == "smile"):
             play("smile")
-        elif(command == "chatgpt"):
-           mode_chatgpt =True
-           play("ok")
+
         else:
           os.startfile(command)
 
@@ -123,15 +119,24 @@ def execute(query):
    value = filter(query)
    if(value == None):
       play("not_found")
+      return False
    elif(value == "gpt_mode"):
       play('ok')
       otvet =  openaiResponse(query,record)
       speech(otvet) #создаст файл. Запустит плайсоунд. Удалит файл
+      return True
+   elif(value =="ok "):
+      play('ok_1')
+      return True
+   elif(value =="thanks"):
+      play('thanks')
+      return False
    else:
       # print("я попал сюда " + value)
       cmd(value)
       if(value not in ["stupid","ok","thanks","smile"]):
-            play("ok")
+            play("ok") 
+            return False
   
 
        
@@ -153,7 +158,7 @@ def filter(query):
             key = keys
    #return key #вернем уже конкретный ключ
       print(f"{key} ___ {date.commands.get(key)} ___ {max_similarity}")
-      if(max_similarity<60):
+      if(max_similarity<70):
          print(now)
          return None
       else:
@@ -165,14 +170,13 @@ def recognize(byte):
     sp = struct.pack("h" * len(byte), *byte)
     if(kaldi_rec.AcceptWaveform(sp)):
        letter = json.loads(kaldi_rec.Result())["text"]
-       if(len(letter)>1):
+       if(len(letter)>3):
           print("распознано " + letter)
           return letter
     
 #запуск программы
 while True:
   
-
   now = record.read()
   keyword_index = porcupine.process(now) #возвращает -1 если нет активационной фразы
   if keyword_index >= 0:
@@ -182,16 +186,17 @@ while True:
       passed_time = 0
       issue_time = time.time()
       count_commands = 0
-    
-      while passed_time-issue_time<15: #10 секунд еще будет активна активационная фраза passed_time-issue_time<30
-         
+      while True: #10 секунд еще будет активна активационная фраза passed_time-issue_time<30
          passed_time = time.time()
          record.start()
          text = recognize(record.read()) #получаем текст распознаный
          #надо проверить в куда запрос отправлть№
          #если режим chata gpt, то текст уже нужно кидать в функцию чата gpt
          if(text!=None):
-             execute(text)
+             m = execute(text)
+             if(m):
+                break
+
 
       if(loudness):
             volume.SetMute(0,None)

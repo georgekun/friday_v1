@@ -26,7 +26,7 @@ def openaiResponse(request,record):
     messages=[
       {"role": "user", "content":f"{request}"}
     ],
-     temperature=0.8
+     temperature=1
   )
   response = translate(completion.choices[0].message.content,'en')
   return response
