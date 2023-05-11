@@ -2,3 +2,4 @@ config.py
 /__pycache__
 main.pyw
 vosk-model-small-ru-0.4
+record.py

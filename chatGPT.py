@@ -18,8 +18,7 @@ def translate(text,from_lang):
 
   return translator.translate(text)
 
-def openaiResponse(request,record):
-  record.stop()
+def openaiResponse(request):
   request = translate(request,'ru')
   completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",

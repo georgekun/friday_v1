@@ -122,7 +122,7 @@ def execute(query):
       return False
    elif(value == "gpt_mode"):
       play('ok')
-      otvet =  openaiResponse(query,record)
+      otvet =  openaiResponse(query)
       speech(otvet) #создаст файл. Запустит плайсоунд. Удалит файл
       return True
    elif(value =="ok "):
@@ -158,7 +158,7 @@ def filter(query):
             key = keys
    #return key #вернем уже конкретный ключ
       print(f"{key} ___ {date.commands.get(key)} ___ {max_similarity}")
-      if(max_similarity<70):
+      if(max_similarity<80):
          print(now)
          return None
       else:
@@ -176,7 +176,6 @@ def recognize(byte):
     
 #запуск программы
 while True:
-  
   now = record.read()
   keyword_index = porcupine.process(now) #возвращает -1 если нет активационной фразы
   if keyword_index >= 0:
@@ -186,9 +185,8 @@ while True:
       passed_time = 0
       issue_time = time.time()
       count_commands = 0
-      while True: #10 секунд еще будет активна активационная фраза passed_time-issue_time<30
+      while passed_time-issue_time<20: #10 секунд еще будет активна активационная фраза passed_time-issue_time<30
          passed_time = time.time()
-         record.start()
          text = recognize(record.read()) #получаем текст распознаный
          #надо проверить в куда запрос отправлть№
          #если режим chata gpt, то текст уже нужно кидать в функцию чата gpt
